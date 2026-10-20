@@ -1,0 +1,132 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1584 396" width="1584" height="396">
+  <defs>
+    <!-- Background & Grid -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#111315" />
+      <stop offset="100%" stop-color="#0a0b0c" />
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(244, 246, 248, 0.03)" stroke-width="1"/>
+    </pattern>
+
+    <!-- Text Gradients (Left to Right) -->
+    <linearGradient id="gradOrange" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffeed1" />
+      <stop offset="30%" stop-color="#ff9f1c" />
+      <stop offset="80%" stop-color="#7a3e00" />
+    </linearGradient>
+    <linearGradient id="gradCyan" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#e6fbff" />
+      <stop offset="30%" stop-color="#00d2ff" />
+      <stop offset="80%" stop-color="#003b66" />
+    </linearGradient>
+    <linearGradient id="gradSub" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="30%" stop-color="#8a99ad" />
+      <stop offset="80%" stop-color="#2a313d" />
+    </linearGradient>
+
+    <!-- 3D Scene Gradients -->
+    <radialGradient id="orbGrad" cx="30%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="60%" stop-color="#00d2ff" />
+      <stop offset="100%" stop-color="#77b2c5" />
+    </radialGradient>
+    <radialGradient id="shadowGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="rgba(56, 216, 252, 0.9)" />
+      <stop offset="50%" stop-color="rgba(56, 216, 252, 0.6)" />
+      <stop offset="100%" stop-color="transparent" />
+    </radialGradient>
+    <radialGradient id="bgGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="rgba(0, 210, 255, 0.15)" />
+      <stop offset="100%" stop-color="transparent" />
+    </radialGradient>
+
+    <!-- Filters for Glow and Drop Shadows -->
+    <filter id="orbGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="12" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+    <filter id="platformShadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="-15" dy="15" stdDeviation="15" flood-color="#000" flood-opacity="0.9"/>
+    </filter>
+    <filter id="textGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="0" stdDeviation="4" flood-color="#00d2ff" flood-opacity="0.4"/>
+    </filter>
+    <filter id="signatureGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="0" stdDeviation="8" flood-color="#00d2ff" flood-opacity="0.8"/>
+      <feDropShadow dx="0" dy="0" stdDeviation="15" flood-color="#00d2ff" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <style>
+    /* Typography Fallbacks */
+    .title { font-family: 'Orbitron', 'Impact', 'Arial Black', sans-serif; font-size: 42px; font-weight: 800; letter-spacing: 1px; }
+    .subtitle { font-family: 'Exo 2', 'Segoe UI', 'Helvetica Neue', sans-serif; font-size: 19px; font-weight: 500; }
+    .signature { font-family: 'Brush Script MT', 'Snell Roundhand', 'Pacifico', cursive; font-size: 130px; fill: #ffffff; }
+    .sig-sub { font-family: 'Courier New', 'Consolas', monospace; font-size: 13px; fill: #00d2ff; letter-spacing: 5px; text-transform: uppercase; opacity: 0.9; }
+
+    /* Animations */
+    @keyframes floatOrb {
+      0%, 100% { transform: translateY(-40px); }
+      50% { transform: translateY(-70px); }
+    }
+    @keyframes pulseLight {
+      0%, 100% { transform: scale(1.2); opacity: 0.4; }
+      50% { transform: scale(0.7); opacity: 1; }
+    }
+
+    .orb { animation: floatOrb 4s ease-in-out infinite; transform-origin: center; }
+    .light { animation: pulseLight 4s ease-in-out infinite; transform-origin: center; }
+  </style>
+
+  <!-- Base Background -->
+  <rect width="100%" height="100%" fill="url(#bgGrad)" />
+  <rect width="100%" height="100%" fill="url(#grid)" />
+  
+  <!-- Top Left Ambient Glow -->
+  <circle cx="150" cy="50" r="300" fill="url(#bgGlow)" />
+
+  <!-- ===============
+       3D SCENE
+       ============== -->
+  <g transform="translate(220, 240)">
+    
+    <!-- Isometric Platform -->
+    <!-- scale(1, 0.5) rotate(45) creates the perfect isometric perspective -->
+    <g transform="scale(1, 0.5) rotate(45)">
+      <!-- Glass Base -->
+      <rect x="-70" y="-70" width="140" height="140" rx="20" fill="rgba(17, 19, 21, 0.5)" stroke="rgba(0, 210, 255, 0.2)" stroke-width="2" filter="url(#platformShadow)" />
+      <!-- Inner Glass Highlight -->
+      <rect x="-68" y="-68" width="136" height="136" rx="18" fill="none" stroke="rgba(255, 255, 255, 0.1)" stroke-width="1" />
+      
+      <!-- Soft Shadow / Pulse Light -->
+      <circle cx="0" cy="0" r="45" fill="url(#shadowGrad)" class="light" />
+    </g>
+
+    <!-- Floating Orb -->
+    <!-- Kept outside the isometric transform so it remains a perfect sphere -->
+    <circle cx="0" cy="0" r="25" fill="url(#orbGrad)" filter="url(#orbGlow)" class="orb" />
+  </g>
+
+  <!-- ====================
+       MAIN CONTENT (TEXT)
+       ==================== -->
+  <g transform="translate(420, 180)">
+    <text x="0" y="0" class="title" fill="url(#gradOrange)">Architetture Full Stack.</text>
+    <text x="0" y="55" class="title" fill="url(#gradCyan)" filter="url(#textGlow)">Visione Tridimensionale.</text>
+    <text x="0" y="105" class="subtitle" fill="url(#gradSub)">Costruisco il web solido di oggi, sognando gli spazi interattivi di domani.</text>
+  </g>
+
+  <!-- ================
+       SIGNATURE
+       =================-->
+  <g transform="translate(1500, 310)">
+    <text x="0" y="0" class="signature" text-anchor="end" filter="url(#signatureGlow)">Sirio Ghiringhelli</text>
+    <text x="0" y="45" class="sig-sub" text-anchor="end">Full Stack Web Developer</text>
+  </g>
+
+</svg>
