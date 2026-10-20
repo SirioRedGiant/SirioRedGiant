@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1584 396" width="100%" height="auto">
+  <defs>
+    <!-- Background & Grid (Light Theme) -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#f0f3f6" />
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(27, 31, 35, 0.04)" stroke-width="1"/>
+    </pattern>
+
+    <!-- Text Gradients (Darker for contrast on white) -->
+    <linearGradient id="gradOrange" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f59e0b" />
+      <stop offset="40%" stop-color="#d97706" />
+      <stop offset="100%" stop-color="#9a3412" />
+    </linearGradient>
+    
+    <linearGradient id="gradCyan" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0ea5e9" />
+      <stop offset="40%" stop-color="#0284c7" />
+      <stop offset="100%" stop-color="#075985" /> 
+    </linearGradient>
+    
+    <linearGradient id="gradSub" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#334155" />
+      <stop offset="100%" stop-color="#64748b" />
+    </linearGradient>
+
+    <!-- 3D Scene Gradients -->
+    <radialGradient id="orbGrad" cx="35%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="50%" stop-color="#00d2ff" />
+      <stop offset="100%" stop-color="#007a99" />
+    </radialGradient>
+    <radialGradient id="shadowGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="rgba(0, 170, 255, 0.6)" />
+      <stop offset="40%" stop-color="rgba(0, 170, 255, 0.3)" />
+      <stop offset="100%" stop-color="transparent" />
+    </radialGradient>
+    <radialGradient id="bgGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="rgba(0, 170, 255, 0.08)" />
+      <stop offset="100%" stop-color="transparent" />
+    </radialGradient>
+
+    <!-- Filters (Softer shadows for light theme) -->
+    <filter id="orbGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+    <filter id="platformShadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="-10" dy="15" stdDeviation="10" flood-color="#000" flood-opacity="0.15"/>
+    </filter>
+    <filter id="textGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="0" stdDeviation="4" flood-color="#0284c7" flood-opacity="0.2"/>
+    </filter>
+    
+    <filter id="signatureGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="0" stdDeviation="4" flood-color="#0ea5e9" flood-opacity="0.4"/>
+      <feDropShadow dx="0" dy="0" stdDeviation="15" flood-color="#0ea5e9" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <style>
+    /* Typography Fallbacks */
+    .title { font-family: 'Orbitron', 'Impact', 'Arial Black', sans-serif; font-size: 42px; font-weight: 800; letter-spacing: 1px; }
+    .subtitle { font-family: 'Exo 2', 'Segoe UI', 'Helvetica Neue', sans-serif; font-size: 19px; font-weight: 500; }
+    /* Firma scura per il tema chiaro */
+    .signature { font-family: 'Brush Script MT', 'Snell Roundhand', 'Pacifico', cursive; font-size: 80px; fill: #0f172a; }
+    .sig-sub { font-family: 'Courier New', 'Consolas', monospace; font-size: 13px; fill: #0284c7; letter-spacing: 5px; text-transform: uppercase; font-weight: bold; }
+  </style>
+
+  <!-- Base Background -->
+  <rect width="100%" height="100%" fill="url(#bgGrad)" />
+  <rect width="100%" height="100%" fill="url(#grid)" />
+  <circle cx="150" cy="50" r="300" fill="url(#bgGlow)" />
+
+  <!-- ===========
+       3D SCENE
+       =========== -->
+  <g transform="translate(200, 220)">
+    
+    <!-- Isometric Platform (Light Glassmorphism) -->
+    <g transform="scale(1, 0.5) rotate(45)">
+      <rect x="-70" y="-70" width="140" height="140" rx="20" fill="rgba(255, 255, 255, 0.7)" stroke="rgba(0, 170, 255, 0.3)" stroke-width="2" filter="url(#platformShadow)" />
+      <rect x="-68" y="-68" width="136" height="136" rx="18" fill="none" stroke="rgba(255, 255, 255, 1)" stroke-width="2" />
+      
+      <!-- Soft Shadow / Pulse Light -->
+      <circle cx="0" cy="0" r="45" fill="url(#shadowGrad)">
+        <animate attributeName="r" values="80; 40; 80" dur="4s" repeatCount="indefinite" />
+        <animate attributeName="opacity" values="0.3; 0.8; 0.3" dur="4s" repeatCount="indefinite" />
+      </circle>
+    </g>
+
+    <!-- Floating Orb -->
+    <circle cx="0" cy="0" r="25" fill="url(#orbGrad)" filter="url(#orbGlow)">
+      <animateTransform attributeName="transform" type="translate" values="0 -30; 0 -80; 0 -30" dur="4s" repeatCount="indefinite" />
+    </circle>
+  </g>
+
+  <!-- ====================
+       MAIN CONTENT (TEXT)
+       ==================== -->
+  <g transform="translate(380, 160)">
+    <text x="0" y="0" class="title" fill="url(#gradOrange)">Architetture Full Stack.</text>
+    <text x="0" y="55" class="title" fill="url(#gradCyan)" filter="url(#textGlow)">Visione Tridimensionale.</text>
+    <text x="0" y="105" class="subtitle" fill="url(#gradSub)">Costruisco il web solido di oggi, sognando gli spazi interattivi di domani.</text>
+  </g>
+
+  <!-- ============
+       SIGNATURE
+       =========== -->
+  <g transform="translate(1500, 270)">
+    <text x="0" y="0" class="signature" text-anchor="end" filter="url(#signatureGlow)">Sirio Ghiringhelli</text>
+    <text x="0" y="40" class="sig-sub" text-anchor="end">Full Stack Web Developer</text>
+  </g>
+
+</svg>
