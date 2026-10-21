@@ -135,7 +135,7 @@
   <g transform="translate(50, 50)">
     <rect width="140" height="180" fill="#05100E" stroke="#A6D7B2" stroke-width="2" filter="url(#glow)"/>
     <!-- LINK RAW OTACON -->
-    <image href="https://raw.githubusercontent.com/SirioRedGiant/SirioRedGiant/main/assets/otacon.gif" width="140" height="180" filter="url(#mgs-filter)" preserveAspectRatio="none"/>
+    <image href="https://raw.githubusercontent.com/SirioRedGiant/SirioRedGiant/main/assets/otacon.gif" width="140" height="180" filter="url(#mgs-filter)" preserveAspectRatio="xMidYMid meet"/>
     <rect width="140" height="180" fill="url(#scanlines)" opacity="0.5"/>
   </g>
 
@@ -143,7 +143,7 @@
   <g transform="translate(610, 50)">
     <rect width="140" height="180" fill="#05100E" stroke="#A6D7B2" stroke-width="2" filter="url(#glow)"/>
     <!-- LINK RAW SNAKE -->
-    <image href="https://raw.githubusercontent.com/SirioRedGiant/SirioRedGiant/main/assets/snake.gif" width="140" height="180" filter="url(#mgs-filter)" preserveAspectRatio="none"/>
+    <image href="https://raw.githubusercontent.com/SirioRedGiant/SirioRedGiant/main/assets/snake.gif" width="140" height="180" filter="url(#mgs-filter)" preserveAspectRatio="xMidYMid meet"/>
     <rect width="140" height="180" fill="url(#scanlines)" opacity="0.5"/>
   </g>
 
