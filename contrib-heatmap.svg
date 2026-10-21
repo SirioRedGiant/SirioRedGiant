@@ -372,6 +372,6 @@
 <rect class="day" x="780" y="0" width="11" height="11" fill="#161b22" rx="2" style="animation-delay: 1.04s"/>
 <rect class="day" x="780" y="15" width="11" height="11" fill="#161b22" rx="2" style="animation-delay: 1.06s"/>
 <rect class="day" x="780" y="30" width="11" height="11" fill="#006d32" rx="2" style="animation-delay: 1.08s"/>
-<rect class="day" x="780" y="45" width="11" height="11" fill="#006d32" rx="2" style="animation-delay: 1.10s"/>
+<rect class="day" x="780" y="45" width="11" height="11" fill="#26a641" rx="2" style="animation-delay: 1.10s"/>
 </g>
 </svg>
