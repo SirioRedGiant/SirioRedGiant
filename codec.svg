@@ -131,19 +131,22 @@
   <!-- ==========================
        RITRATTI (Snake & Otacon)
        ========================== -->
-  <!-- Otacon (Sinistra) -->
+ <!-- Otacon (Sinistra) -->
   <g transform="translate(50, 50)">
     <rect width="140" height="180" fill="#05100E" stroke="#A6D7B2" stroke-width="2" filter="url(#glow)"/>
-    <image href="https://mezucore.neocities.org/mgs/otacon.gif" width="140" height="180" filter="url(#mgs-filter)" preserveAspectRatio="xMidYMid slice"/>
+    <!-- LINK RAW OTACON -->
+    <image href="https://raw.githubusercontent.com/SirioRedGiant/SirioRedGiant/main/assets/otacon.gif" width="140" height="180" filter="url(#mgs-filter)" preserveAspectRatio="xMidYMid slice"/>
     <rect width="140" height="180" fill="url(#scanlines)" opacity="0.5"/>
   </g>
 
   <!-- Snake (Destra) -->
   <g transform="translate(610, 50)">
     <rect width="140" height="180" fill="#05100E" stroke="#A6D7B2" stroke-width="2" filter="url(#glow)"/>
-    <image href="https://mezucore.neocities.org/mgs/snake.gif" width="140" height="180" filter="url(#mgs-filter)" preserveAspectRatio="xMidYMid slice"/>
+    <!-- LINK RAW SNAKE -->
+    <image href="https://raw.githubusercontent.com/SirioRedGiant/SirioRedGiant/main/assets/snake%20(1).gif" width="140" height="180" filter="url(#mgs-filter)" preserveAspectRatio="xMidYMid slice"/>
     <rect width="140" height="180" fill="url(#scanlines)" opacity="0.5"/>
   </g>
+
 
   <!-- =============================
        DIALOGO (Sottotitoli animati)
