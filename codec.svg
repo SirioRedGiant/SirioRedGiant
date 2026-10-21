@@ -1,0 +1,203 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="100%" height="auto" style="background-color: #000;">
+  <defs>
+    <!-- Filtro Verde e Pixelato per i volti -->
+    <filter id="mgs-filter" x="0" y="0" width="100%" height="100%">
+      <feColorMatrix type="matrix" values="
+        0 0 0 0 0
+        0 1 0 0 0.2
+        0 0.5 0 0 0.1
+        0 0 0 1 0" />
+      <feComponentTransfer><feFuncG type="linear" slope="1.5"/></feComponentTransfer>
+    </filter>
+
+    <!-- Scanlines -->
+    <pattern id="scanlines" width="4" height="4" patternUnits="userSpaceOnUse">
+      <rect width="4" height="2" fill="rgba(0, 255, 204, 0.05)" />
+      <rect y="2" width="4" height="2" fill="rgba(0, 0, 0, 0.3)" />
+    </pattern>
+
+    <!-- Glow Verde -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=VT323&amp;display=swap');
+    
+    text {
+      font-family: 'VT323', monospace, sans-serif;
+      fill: #A6D7B2;
+    }
+    
+    .bg-scan { animation: scrollScan 10s linear infinite; }
+    @keyframes scrollScan { from { transform: translateY(0); } to { transform: translateY(40px); } }
+    
+    /* Animazione Volume Meter */
+    .vol-bar { animation: volumeAnim 0.9s infinite alternate; }
+    @keyframes volumeAnim { 
+      0% { fill: #05100E; opacity: 0.3; } 
+      100% { fill: #D3E9E6; opacity: 1; filter: drop-shadow(0 0 5px #00ffcc); } 
+    }
+
+    /* Animazione Testo (Macchina da scrivere a comparsa ritardata) */
+    .dialogue { opacity: 0; }
+    
+    .line1  { animation: showText 4s forwards; animation-delay: 1s; }
+    .line2  { animation: showText 4s forwards; animation-delay: 5s; }
+    .line3  { animation: showText 4s forwards; animation-delay: 9s; }
+    .line4  { animation: showText 4s forwards; animation-delay: 13s; }
+    .line5  { animation: showText 8s forwards; animation-delay: 17s; }
+    .line6  { animation: showText 5s forwards; animation-delay: 25s; }
+    .line7  { animation: showText 6s forwards; animation-delay: 30s; }
+    .line8  { animation: showText 4s forwards; animation-delay: 36s; }
+    .line9  { animation: showText 6s forwards; animation-delay: 40s; }
+    .line10 { animation: showText 6s forwards; animation-delay: 46s; }
+
+    @keyframes showText {
+      0% { opacity: 0; }
+      5% { opacity: 1; }
+      95% { opacity: 1; }
+      100% { opacity: 0; }
+    }
+  </style>
+
+  <!-- Sfondo e Scanlines -->
+  <rect width="100%" height="100%" fill="#091A17" />
+  <rect width="100%" height="150%" fill="url(#scanlines)" class="bg-scan" />
+
+  <!-- ======================
+       INTERFACCIA CENTRALE
+       ===================== -->
+  <g transform="translate(300, 50)">
+    <text x="100" y="20" font-size="24" text-anchor="middle" letter-spacing="4" filter="url(#glow)">PTT</text>
+    
+    <!-- Box Frequenza -->
+    <rect x="0" y="40" width="200" height="80" fill="#05100E" stroke="#A6D7B2" stroke-width="2" filter="url(#glow)"/>
+    
+<g transform="translate(10, 97)">
+  
+  <!-- Paletto 1: Sempre attivo, non si vede mai spento (opacità min 0.5) -->
+  <g>
+    <rect x="0" y="-8" width="6" height="8" fill="#D3E9E6" opacity="0.5" />
+    <rect x="0" y="-8" width="6" height="8" fill="#D3E9E6" opacity="0">
+      <animate attributeName="opacity" values="0.5;0.8;1;0.6;0.9;0.5" dur="0.5s" repeatCount="indefinite" />
+    </rect>
+  </g>
+  
+  <!-- Paletto 2-->
+  <g>
+    <rect x="10" y="-14" width="6" height="14" fill="#D3E9E6" opacity="0.3" />
+    <rect x="10" y="-14" width="6" height="14" fill="#D3E9E6" opacity="0">
+      <animate attributeName="opacity" values="0.3;0.7;1;0.4;0.9;0.6;0.3" dur="0.45s" repeatCount="indefinite" />
+    </rect>
+  </g>
+  
+  <!-- Paletto 3 -->
+  <g>
+    <rect x="20" y="-20" width="6" height="20" fill="#D3E9E6" opacity="0.2" />
+    <rect x="20" y="-20" width="6" height="20" fill="#D3E9E6" opacity="0">
+      <animate attributeName="opacity" values="0.1;0.4;0.9;0.2;0.7;0.3;0.1" dur="0.6s" repeatCount="indefinite" />
+    </rect>
+  </g>
+  
+  <!-- Paletto 4 -->
+  <g>
+    <rect x="30" y="-26" width="6" height="26" fill="#D3E9E6" opacity="0.1" />
+    <rect x="30" y="-26" width="6" height="26" fill="#D3E9E6" opacity="0">
+      <animate attributeName="opacity" values="0;0.2;0.7;0.1;0.5;0.1;0" dur="0.75s" repeatCount="indefinite" />
+    </rect>
+  </g>
+  
+  <!-- Paletto 5 -->
+  <g>
+    <rect x="40" y="-32" width="6" height="32" fill="#D3E9E6" opacity="0.1" />
+    <rect x="40" y="-32" width="6" height="32" fill="#D3E9E6" opacity="0">
+      <animate attributeName="opacity" values="0;0;0;0.5;0.8;0.2;0;0" dur="0.9s" repeatCount="indefinite" />
+    </rect>
+  </g>
+
+</g>
+
+    <text x="180" y="95" font-size="48" text-anchor="end" filter="url(#glow)">141.12</text>
+    
+    <text x="100" y="150" font-size="24" text-anchor="middle" letter-spacing="4" filter="url(#glow)">MEMORY</text>
+  </g>
+
+  <!-- ==========================
+       RITRATTI (Snake & Otacon)
+       ========================== -->
+  <!-- Otacon (Sinistra) -->
+  <g transform="translate(50, 50)">
+    <rect width="140" height="180" fill="#05100E" stroke="#A6D7B2" stroke-width="2" filter="url(#glow)"/>
+    <image href="https://mezucore.neocities.org/mgs/otacon.gif" width="140" height="180" filter="url(#mgs-filter)" preserveAspectRatio="xMidYMid slice"/>
+    <rect width="140" height="180" fill="url(#scanlines)" opacity="0.5"/>
+  </g>
+
+  <!-- Snake (Destra) -->
+  <g transform="translate(610, 50)">
+    <rect width="140" height="180" fill="#05100E" stroke="#A6D7B2" stroke-width="2" filter="url(#glow)"/>
+    <image href="https://mezucore.neocities.org/mgs/snake.gif" width="140" height="180" filter="url(#mgs-filter)" preserveAspectRatio="xMidYMid slice"/>
+    <rect width="140" height="180" fill="url(#scanlines)" opacity="0.5"/>
+  </g>
+
+  <!-- =============================
+       DIALOGO (Sottotitoli animati)
+       ============================= -->
+  <g transform="translate(400, 315)" font-size="22" text-anchor="middle" filter="url(#glow)">
+    
+    <text class="dialogue line1">
+      <tspan x="0" dy="0">Snake, I found someone who can help us.</tspan>
+      <tspan x="0" dy="25">An independent System Architect.</tspan>
+    </text>
+
+    <text class="dialogue line2">
+      <tspan x="0" dy="0">Another scientist? I don't need dead weight, Otacon.</tspan>
+      <tspan x="0" dy="25">This is an infiltration mission.</tspan>
+    </text>
+
+    <text class="dialogue line3">
+      <tspan x="0" dy="0">He's different. They call him 'Dr. Astrobleto'...</tspan>
+      <tspan x="0" dy="25">or 'Astroblem'.</tspan>
+    </text>
+
+    <text class="dialogue line4">
+      <tspan x="0" dy="12">Astrobleto? What kind of codename is that?</tspan>
+    </text>
+
+    <text class="dialogue line5">
+      <tspan x="0" dy="-15">It's a blend of Latin roots and military slang! 'Impact crater',</tspan>
+      <tspan x="0" dy="25">or 'The Star Scar'—he leaves a scar of extraordinary code on every project.</tspan>
+      <tspan x="0" dy="25">He built the enemy's database structure, so only he can bypass it.</tspan>
+    </text>
+
+    <text class="dialogue line6">
+      <tspan x="0" dy="0">He architected their PHP and Laravel backend,</tspan>
+      <tspan x="0" dy="25">and now he's controlling the React interface.</tspan>
+    </text>
+
+    <text class="dialogue line7">
+      <tspan x="0" dy="0">Plus, he's mastering WebGL protocols. He can render real-time</tspan>
+      <tspan x="0" dy="25">data flows directly onto your Soliton Radar for a massive tactical edge.</tspan>
+    </text>
+
+    <text class="dialogue line8">
+      <tspan x="0" dy="12">...Hmph. A tactical programmer, huh?</tspan>
+    </text>
+
+    <text class="dialogue line9">
+      <tspan x="0" dy="0">If he built their system, he knows every blind spot.</tspan>
+      <tspan x="0" dy="25">I want his contact info and all data you have on this 'Astroblem'.</tspan>
+    </text>
+
+    <text class="dialogue line10">
+      <tspan x="0" dy="0">Got it, Snake! Leave it to me! Encrypting the feed and opening</tspan>
+      <tspan x="0" dy="25">a secure line on frequency 141.15. R-right, Snake... be careful out there!</tspan>
+    </text>
+
+  </g>
+</svg>
