@@ -75,16 +75,20 @@
   <!-- ======================
        DATI DOSSIER (Destra)
        ====================== -->
-  <g transform="translate(250, 50)" class="glitch" filter="url(#glow)">
-    <text x="0" y="0" font-size="36" fill="#D3E9E6" letter-spacing="2">DOSSIER: DR. ASTROBLETO</text>
-    <line x1="0" y1="15" x2="500" y2="15" stroke="#A6D7B2" stroke-width="2" />
-    
-    <text x="0" y="50" font-size="24">
-      <tspan x="0" dy="0" fill="#3bcb86">REAL NAME:</tspan> <tspan dx="10">Sirio Ghiringhelli</tspan>
-      <tspan x="0" dy="35" fill="#3bcb86">CALLSIGN:</tspan> <tspan dx="10">"Astroblem" [The Scar Star]</tspan>
-      <tspan x="0" dy="35" fill="#3bcb86">FREQ:</tspan> <tspan dx="10">CODEC 141.15 MHz</tspan>
-      <tspan x="0" dy="35" fill="#3bcb86">AFFILIATION:</tspan> <tspan dx="10">Independent Support / System Architect</tspan>
-      <tspan x="0" dy="35" fill="#3bcb86">STATUS:</tspan> <tspan dx="10">Active Technical Adviser (Infiltrated)</tspan>
-    </text>
+  <!-- Gruppo esterno: gestisce la posizione statica (puoi regolare translate qui) -->
+  <g transform="translate(275, 50)" filter="url(#glow)">
+    <!-- Gruppo interno: gestisce solo l'animazione glitch -->
+    <g class="glitch">
+      <text x="-50" y="0" font-size="32" fill="#D3E9E6" letter-spacing="2">DOSSIER: DR. ASTROBLETO</text>
+      <line x1="-50" y1="15" x2="470" y2="15" stroke="#A6D7B2" stroke-width="2" />
+      
+      <text x="-50" y="45" font-size="20">
+        <tspan x="-50" dy="0" fill="#3bcb86">REAL NAME:</tspan> <tspan dx="10">Sirio Ghiringhelli</tspan>
+        <tspan x="-50" dy="40" fill="#3bcb86">CALLSIGN:</tspan> <tspan dx="10">"Astroblem" [The Star Scar]</tspan>
+        <tspan x="-50" dy="40" fill="#3bcb86">RADIO FREQ:</tspan> <tspan dx="10">CODEC 141.15 MHz</tspan>
+        <tspan x="-50" dy="40" fill="#3bcb86">AFFILIATION:</tspan> <tspan dx="0">Independent Support / System Architect</tspan>
+        <tspan x="-50" dy="40" fill="#3bcb86">STATUS:</tspan> <tspan dx="10">Active Technical Adviser (Infiltrated)</tspan>
+      </text>
+    </g>
   </g>
 </svg>
