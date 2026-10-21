@@ -62,19 +62,19 @@
   <!-- Bordo Esterno -->
   <rect x="10" y="10" width="780" height="280" fill="none" stroke="#A6D7B2" stroke-width="2" filter="url(#glow)"/>
 
-  <!-- ======================
+  <!-- ==================
        LA FOTO (Sinistra)
-       ====================== -->
-  <g transform="translate(30, 30)">
+       ==================-->
+   <g transform="translate(30, 30)">
     <rect width="180" height="240" fill="#000" stroke="#A6D7B2" stroke-width="2" filter="url(#glow)"/>
-    <!-- Carica la tua foto reale e le applica il filtro verde/contrasto -->
-    <image href="codec-photo.png" width="180" height="240" filter="url(#mgs-photo)" preserveAspectRatio="xMidYMid slice"/>
+    <!-- LINK RAW FOTO -->
+    <image href="https://raw.githubusercontent.com/SirioRedGiant/SirioRedGiant/main/assets/codec-photo.png" width="180" height="240" filter="url(#mgs-photo)" preserveAspectRatio="xMidYMid slice"/>
     <rect width="180" height="240" fill="url(#scanlines)" opacity="0.6"/>
   </g>
 
-  <!-- ==========================================
+  <!-- ======================
        DATI DOSSIER (Destra)
-       ========================================== -->
+       ====================== -->
   <g transform="translate(250, 50)" class="glitch" filter="url(#glow)">
     <text x="0" y="0" font-size="36" fill="#D3E9E6" letter-spacing="2">DOSSIER: DR. ASTROBLETO</text>
     <line x1="0" y1="15" x2="500" y2="15" stroke="#A6D7B2" stroke-width="2" />
