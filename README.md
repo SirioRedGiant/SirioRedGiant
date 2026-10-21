@@ -8,7 +8,7 @@
 
 <br>
 
-## <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f468_200d_1f4bb/512.gif" alt="👨‍💻" width="32" height="32" align="center"> Chi Sono
+## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/People%20with%20professions/Man%20Technologist%20Light%20Skin%20Tone.png" alt="Man Technologist" width="30" height="30" align="absmiddle" /> Chi Sono
 
 Ciao! Sono **Sirio Ghiringhelli**, un Full-Stack Web Developer nato a Milano, ma per ora residente a Sondrio.
 
@@ -16,11 +16,16 @@ Dopo 10 anni di esperienza consolidata nella logistica e nel customer care, ho d
 
 Il mio approccio unisce la precisione organizzativa e il problem-solving del mio background precedente alla mia vivace creatività ed alla mia famelica curiosità riguardo lo sviluppo software.
 
-Il mio obiettivo? *Costruire il web solido di oggi, sognando gli spazi interattivi di domani.*
+Il mio obiettivo?
+<br>
+*<!-- Effetto Macchina da Scrivere Animato -->
+  <a href="https://github.com/SirioRedGiant">
+    <img src="https://readme-typing-svg.herokuapp.com/?font=Orbitron&weight=600&size=22&pause=1000&color=00D2FF&center=true&vCenter=true&width=600&lines=Full-Stack+Web+Developer;Costruire+le+fondamenta+robuste+di+oggi;Sognando+gli+spazi+interattivi+di+domani" alt="Typing SVG" />
+  </a>*
 
 ---
 
-## <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f6e0_fe0f/512.gif" alt="🛠️" width="32" height="32" align="center"> Competenze Tecniche
+## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Wrench.png" alt="Wrench" width="30" height="30" align="absmiddle" /> Competenze Tecniche
 
 ### Backend & Database
 ![PHP](https://img.shields.io/badge/PHP_8+-777BB4?style=for-the-badge&logo=php&logoColor=white)
@@ -55,7 +60,8 @@ Il mio obiettivo? *Costruire il web solido di oggi, sognando gli spazi interatti
 
 ---
 
-## <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f680/512.gif" alt="🚀" width="32" height="32" align="center"> Progetti in Evidenza
+## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Rocket.png" alt="Rocket" width="30" height="30" align="absmiddle" /> Progetti in Evidenza
+
 
 * 🛒 **[Ghiri Gori Gaming](https://github.com/SirioRedGiant/E-commerce_Ghiri_Gori.git)** — *Headless E-Commerce Web App* (PHP/Laravel backend, MySQL, REST APIs, React).
 * 🕹️ **[Press Start](https://github.com/SirioRedGiant/retro_games.git)** — *Full-Stack Retro-Gaming E-Commerce* (Progetto di gruppo Boolean: DB Design & CRUD).
@@ -63,16 +69,14 @@ Il mio obiettivo? *Costruire il web solido di oggi, sognando gli spazi interatti
 
 ---
 
-## <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f4ca/512.gif" alt="📊" width="32" height="32" align="center"> GitHub Stats
+## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Bar%20Chart.png" alt="Bar Chart" width="30" height="30" align="absmiddle" /> GitHub Stats
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=SirioRedGiant&show_icons=true&theme=tokyonight&hide_border=true&bg_color=111315" alt="Sirio's GitHub Stats" height="192"/>
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=SirioRedGiant&layout=compact&theme=tokyonight&hide_border=true&bg_color=111315&hide=c++,c,c+" alt="Top Languages" height="192"/>
+  <img src="https://github-readme-stats.vercel.app/api?username=SirioRedGiant&show_icons=true&theme=tokyonight&hide_border=true&bg_color=111315&hide_rank=true" alt="Sirio's GitHub Stats" height="192"/>
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=SirioRedGiant&layout=compact&theme=tokyonight&hide_border=true&bg_color=111315&hide=c++,c,c%23" alt="Top Languages" height="192"/>
 </div>
 
----
-
-## <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f4eb/512.gif" alt="📫" width="32" height="32" align="center"> Come Contattarmi
+## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Postbox.png" alt="Postbox" width="30" height="30" align="absmiddle" /> Come Contattarmi
 
 <p align="center">
   <a href="https://www.linkedin.com/in/sirio-ghiringhelli-webdev">
@@ -82,3 +86,5 @@ Il mio obiettivo? *Costruire il web solido di oggi, sognando gli spazi interatti
     <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email Badge"/>
   </a>
 </p>
+
+
