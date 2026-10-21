@@ -3,21 +3,23 @@ name: Generate Contribution Heatmap
 on:
   schedule:
   # Esegue ogni giorno a mezzanotte UTC
-    - cron: "0 0 * * *" 
-  workflow_dispatch: # Permette di avviarlo manualmente dal tab "Actions"
+    - cron: "0 0 * * *"
+  workflow_dispatch: # Permette di avviarlo manualmente
   push:
     branches:
-      - main # O 'master' se il tuo branch principale si chiama così
+      - main
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      # v4 per evitare il warning di Node.js
       - name: Checkout Repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
+      # v5 per evitare il warning di Node.js
       - name: Setup Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: '3.10'
 
@@ -27,8 +29,9 @@ jobs:
       - name: Generate Heatmap
         run: python scripts/generate_heatmap.py
 
+      # Usiamo la v5 per evitare il warning di Node.js
       - name: Commit and Push Changes
-        uses: stefanzweifel/git-auto-commit-action@v4
+        uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "Auto-update contribution heatmap"
           file_pattern: contrib-heatmap.svg
