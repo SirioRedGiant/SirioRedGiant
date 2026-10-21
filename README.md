@@ -87,3 +87,24 @@ Il mio obiettivo?
 </p>
 
 
+<!-- da migliorare il bottone-freccetta -->
+<br>
+<br>
+
+<div align="center">
+  <details>
+    <summary>
+      <img src="https://readme-typing-svg.herokuapp.com/?font=VT323&weight=400&size=24&pause=1000&color=00FFCC&center=true&vCenter=true&width=300&lines=▶+INCOMING+TRANSMISSION...;▶+CLICK+TO+OPEN+CHANNEL" alt="Incoming Transmission" style="cursor: pointer; border: 1px solid #00FFCC; padding: 10px; background-color: #091A17; border-radius: 5px;">
+    </summary>
+    <br>
+    <img src="codec.svg" alt="MGS Codec Call" width="100%">
+    <br><br>
+    <img src="dossier.svg" alt="Dr. Astrobleto Dossier" width="100%">
+  </details>
+</div>
+
+<div align="center">
+  <br>
+  <img src="https://komarev.com/ghpvc/?username=SirioRedGiant&color=00d2ff&style=flat-square&label=VISITE+AL+PROFILO" alt="Profile Views" />
+</div>
+
