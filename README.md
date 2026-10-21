@@ -72,8 +72,7 @@ Il mio obiettivo?
 ## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Bar%20Chart.png" alt="Bar Chart" width="30" height="30" align="absmiddle" /> GitHub Stats
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=SirioRedGiant&show_icons=true&theme=tokyonight&hide_border=true&bg_color=111315&hide_rank=true" alt="Sirio's GitHub Stats" height="192"/>
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=SirioRedGiant&layout=compact&theme=tokyonight&hide_border=true&bg_color=111315&hide=c++,c,c%23" alt="Top Languages" height="192"/>
+  <img src="contrib-heatmap.svg" alt="Sirio's Contribution Heatmap" />
 </div>
 
 ## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Postbox.png" alt="Postbox" width="30" height="30" align="absmiddle" /> Come Contattarmi
